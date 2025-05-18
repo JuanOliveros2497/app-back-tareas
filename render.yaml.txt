@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: app-back-tareas
+    env: java
+    plan: free
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar target/AppBackTareas-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: DB_HOST
+        value: byjfioptmzfv19uvtpu4-mysql.services.clever-cloud.com
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_NAME
+        value: byjfioptmzfv19uvtpu4
+      - key: DB_USER
+        value: utlrvtuul4ovickv
+      - key: DB_PASSWORD
+        value: FKtyrSEHYny7MpTs0vIy
